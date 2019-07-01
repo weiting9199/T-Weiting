@@ -4,11 +4,11 @@ public class Task_1 {
 	/**
 	 * 在 level = 5 的 case 下要在 console 顯示：
 	 * <pre>
-	 *      1
-	 *     234
-	 *    56789
-	 *   0123456
-	 *  789012345
+	 *      1      |  1 = 2*1-1
+	 *     234     |  3 = 2*2-1
+	 *    56789    |  5 = 2*3-1
+	 *   0123456   |  7 = 2*4-1
+	 *  789012345  |  9 = 2*5-1
 	 * </pre>
 	 */
 	public static void main(String[] args) {
@@ -23,6 +23,26 @@ public class Task_1 {
 
 	private static void version1(int level) {
 		// TODO Auto-generated method stub
+		int num = 0; //共有幾個數字
+		for (int i = 1; i <= 2*level-1; i+=2) {
+			num += i;
+		}
+		int x = 1; //用來跑要印的數字
+		for (int i = 1; i <= level; i++) {
+			for (int j = level-i; j >= 0; j--) {//印空格
+				System.out.print(" ");
+			}
+			int count = 0; //紀錄每一層印了幾個數字
+			while (x <= num) {
+				if (count == 2*i-1) {
+					break;
+				}
+				System.out.print(x%10);
+				count++;
+				x++;
+			}
+			System.out.println(" ");
+		}
 	}
 
 	private static void version2(int level) {
