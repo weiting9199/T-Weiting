@@ -45,10 +45,6 @@ public class Task_1 {
 	}
 
 	private static void version2(int level) {
-		int num = 0; //共有幾個數字
-		for (int i = 1; i <= 2*level-1; i+=2) {
-			num += i;
-		}
 		int x = 1; //用來跑要印的數字
 		int [][] list = new int [level][];
 		for (int i = 0; i < level; i++) {
