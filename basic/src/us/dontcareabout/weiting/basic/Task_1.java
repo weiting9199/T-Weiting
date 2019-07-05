@@ -40,7 +40,7 @@ public class Task_1 {
 				count++;
 				x++;
 			}
-			System.out.println(" ");
+			System.out.println();
 		}
 	}
 
@@ -61,12 +61,12 @@ public class Task_1 {
 		}
 		for (int i = 0; i < level; i++) {
 			for (int j = level-i; j > 0; j--) {
-				System.out.print("*");
+				System.out.print(" ");
 			}
 			for (int j = 0; j < list[i].length; j++) {
 				System.out.print(list[i][j]);
 			}
-			System.out.println("");
+			System.out.println();
 		}
 	}
 
