@@ -4,11 +4,11 @@ public class Task_1 {
 	/**
 	 * 在 level = 5 的 case 下要在 console 顯示：
 	 * <pre>
-	 *      1      |  1 = 2*1-1
-	 *     234     |  3 = 2*2-1
-	 *    56789    |  5 = 2*3-1
-	 *   0123456   |  7 = 2*4-1
-	 *  789012345  |  9 = 2*5-1
+	 *      1
+	 *     234
+	 *    56789
+	 *   0123456
+	 *  789012345
 	 * </pre>
 	 */
 	public static void main(String[] args) {
@@ -22,7 +22,6 @@ public class Task_1 {
 	}
 
 	private static void version1(int level) {
-		// TODO Auto-generated method stub
 		int num = 0; //共有幾個數字
 		for (int i = 1; i <= 2*level-1; i+=2) {
 			num += i;
@@ -46,7 +45,6 @@ public class Task_1 {
 	}
 
 	private static void version2(int level) {
-		// TODO Auto-generated method stub
 		int num = 0; //共有幾個數字
 		for (int i = 1; i <= 2*level-1; i+=2) {
 			num += i;
