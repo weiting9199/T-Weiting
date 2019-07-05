@@ -22,17 +22,13 @@ public class Task_1 {
 	}
 
 	private static void version1(int level) {
-		int num = 0; //共有幾個數字
-		for (int i = 1; i <= 2*level-1; i+=2) {
-			num += i;
-		}
-		int x = 1; //用來跑要印的數字
+		int x = 1;
 		for (int i = 1; i <= level; i++) {
 			for (int j = level-i; j >= 0; j--) {//印空格
 				System.out.print(" ");
 			}
 			int count = 0; //紀錄每一層印了幾個數字
-			while (x <= num) {
+			while (x <= (level*level)) {
 				if (count == 2*i-1) {
 					break;
 				}
