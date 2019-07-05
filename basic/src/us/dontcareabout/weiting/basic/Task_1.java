@@ -22,44 +22,11 @@ public class Task_1 {
 	}
 
 	private static void version1(int level) {
-		int x = 1;
-		for (int i = 1; i <= level; i++) {
-			for (int j = level-i; j >= 0; j--) {//印空格
-				System.out.print(" ");
-			}
-			int count = 0; //紀錄每一層印了幾個數字
-			while (x <= (level*level)) {
-				if (count == 2*i-1) {
-					break;
-				}
-				System.out.print(x%10);
-				count++;
-				x++;
-			}
-			System.out.println();
-		}
+		// TODO Auto-generated method stub
 	}
 
 	private static void version2(int level) {
-		int x = 1; //用來跑要印的數字
-		int[][] list = new int[level][];
-		for (int i = 0; i < level; i++) {
-			int[] tmp = new int[2*(i+1)-1];
-			list[i] = tmp; // [00],[[10][11],[20][21][22],[30][31][32][33],[40][41][42][43][44]
-			for (int j = 0; j < tmp.length; j++) {
-				list[i][j] = x % 10;
-				x++;
-			}
-		}
-		for (int i = 0; i < level; i++) {
-			for (int j = level-i; j > 0; j--) {
-				System.out.print(" ");
-			}
-			for (int j = 0; j < list[i].length; j++) {
-				System.out.print(list[i][j]);
-			}
-			System.out.println();
-		}
+		// TODO Auto-generated method stub
 	}
 
 	private static void version3(int level) {
