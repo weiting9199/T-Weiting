@@ -27,13 +27,8 @@ public class Task_1 {
 			for (int j = level-i; j >= 0; j--) {//印空格
 				System.out.print(" ");
 			}
-			int count = 0; //記錄每一層印了幾個數字
-			while (x <= (level*level)) {
-				if (count == 2*i-1) {
-					break;
-				}
+			for (int j = 0; j < 2*i-1; j++) {
 				System.out.print(x%10);
-				count++;
 				x++;
 			}
 			System.out.println();
@@ -45,7 +40,7 @@ public class Task_1 {
 		int[][] list = new int[level][];
 		for (int i = 0; i < level; i++) {
 			int[] tmp = new int[2*(i+1)-1];
-			list[i] = tmp; // [00],[10][11],[20][21][22],[30][31][32][33],[40][41][42][43][44]
+			list[i] = tmp; // [00],[[10][11],[20][21][22],[30][31][32][33],[40][41][42][43][44]
 			for (int j = 0; j < tmp.length; j++) {
 				list[i][j] = x % 10;
 				x++;
